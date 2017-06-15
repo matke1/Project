@@ -1,0 +1,59 @@
+body {
+  background: #262626;
+  font-family: helvetica,ariel,sans-serif; }
+
+header {
+  margin: 20px 0 0 5%; }
+  header h1 {
+    color: #7BCCE8; }
+  header h2 {
+    color: #7BCCE8;
+    margin: 10px 10%; }
+
+p {
+  margin: 20px 5%; }
+
+a {
+  color: #7BCCE8; }
+
+.grad {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  padding: 1%;
+  backgorund-color: #C3E87B;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#C3E87B), to(#ffffdf));
+  background-image: -webkit-linear-gradient(top, #C3E87B, #ffffdf);
+  background-image: -moz-linear-gradient(top, #C3E87B, #ffffdf);
+  background-image: -ms-linear-gradient(top, #C3E87B, #ffffdf);
+  background-image: -o-linear-gradient(top, #C3E87B, #ffffdf); }
+  .grad h2 {
+    color: #7BCCE8;
+    margin: 10px 10%; }
+  .grad .intro, .grad .feature {
+    background-color: rgba(51, 51, 51, 0.3);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    color: #aaa;
+    width: 38%; }
+  .grad .feature {
+    width: 62%; }
+
+.one {
+  background: black;
+  color: #e6e6e6; }
+
+.two {
+  background: #141414;
+  color: #fafafa; }
+
+.three {
+  background: white;
+  color: #1a1a1a; }
+
+.four {
+  background: #3c3c3c;
+  color: white; }
+
+/*# sourceMappingURL=Style.css.map */

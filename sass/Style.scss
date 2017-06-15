@@ -1,0 +1,94 @@
+$blue:#7BCCE8;
+$margin:5%;
+$cream:#C3E87B;
+$cream2:$cream + 100;
+
+
+
+@mixin border-radius($radius:20px){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+body {
+  background: #262626;
+  font-family:helvetica,ariel,sans-serif;
+}
+
+header{
+  margin:20px 0 0 $margin;
+
+  h1{
+    color:$blue;
+  }
+
+  h2{
+    color:$blue;
+    margin:10px $margin + 5%;
+  }
+}
+
+p{
+  margin:20px $margin;
+}
+
+
+a{
+  color: $blue;
+}
+   
+.grad{
+
+  @include border-radius;
+
+  padding:1%;
+  backgorund-color:$cream;
+  background-image: -webkit-gradient(linear,left top,left bottom,from($cream),to($cream2));
+  background-image: -webkit-linear-gradient(top,$cream,$cream2);
+  background-image: -moz-linear-gradient(top,$cream,$cream2);
+  background-image: -ms-linear-gradient(top,$cream,$cream2);
+  background-image: -o-linear-gradient(top,$cream,$cream2);
+
+  h2{
+    color:$blue;
+    margin:10px $margin + 5%;
+  }
+.intro {
+  background-color: fade-out(#333, 0.7);
+  @include border-radius;
+  color: #aaa;
+  width:round(percentage(550px / 1440px));
+  }
+  .feature{
+    @extend .intro;
+    width:round(percentage(890px / 1440px));
+  }
+}
+
+@function text-contrast($background) {
+  @if lightness($background)<50%{
+    @return lighten($background, 90%);
+  }@else{
+    @return darken($background, 90%);
+  }
+}
+
+
+@each $p in(
+one black,
+two black + 20,
+three white,
+four black + 60
+){
+  .#{nth($p,1)} {background:nth($p,2);color:text-contrast(nth($p,2));}
+}
+
+
+
+
+
+
+
+
+
